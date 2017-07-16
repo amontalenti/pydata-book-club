@@ -1,4 +1,4 @@
-# Module 1: PyData Environment Setup
+# PyData Environment Setup (#01)
 
 ## Bare install: setup miniconda
 
