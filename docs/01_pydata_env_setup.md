@@ -69,3 +69,26 @@ This will put something like this in your console:
 
 Just paste that link into your browser, and you should see a notebook
 application that lets you run Python in your browser.
+
+## Organizing notebooks
+
+You can think of `jupyter-notebook` as a code editor or IDE, akin to
+Atom, Sublime, vim, etc. When you run it, it uses the *current directory*
+as the working directory, and expects to find source files in there.
+The typical source file has an `ipynb` extension, which stands for
+`(ip)ython (n)ote(b)ook`, and embeds code, results of execution,
+and partial views of data in a single JSON format that is versionable
+in Github and even can be uploaded to Github gist directly for
+live rendering.
+
+You can also have data files (like JSON and CSV files) available
+locally, and you'll be able to load them using regular Python
+file objects, since built-ins like the `open()` function will
+work off your current working directory -- that is, the
+working directory of the IPython Kernel running underneath
+your notebook.
+
+I recommend you create a folder called `~/notebooks` in your
+home directory, and always run the Jupyter Notebook from there,
+and keep that directory under source control so you can practice
+making notebooks as versioned documents in Github and other places.
