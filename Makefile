@@ -2,6 +2,8 @@ USER=jupyter
 REPO=datascience-notebook
 TAG=786611348de1
 .PHONY : html pdf clean notebook
+bash:
+	docker run --rm -v `pwd`/notebooks:/home/jovyan/work -it $(USER)/$(REPO):$(TAG) bash
 notebook:
 	docker run --rm -p 8888:8888 -v `pwd`/notebooks:/home/jovyan/work -it $(USER)/$(REPO):$(TAG)
 
